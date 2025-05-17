@@ -1,0 +1,125 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts/mixins' as mix;
+
+footer{
+    background-color: #242424;
+    background-image: url(./../../img/muelles.png);
+    background-repeat: no-repeat;
+    background-position-y: 61%;
+    @include mix.breakpoint(tablet){
+        background-position-y: 75%;
+    }
+    @include mix.breakpoint(tablethorizontal){
+        background-position-y: 60%;
+        background-image: url(./../../img/muelle_desktop.png);
+    }
+    & section.contact{
+        border-bottom: 1px solid #ffffff;
+        @include mix.breakpoint(tablet){
+            padding: 60px 160px;
+        }
+        @include mix.breakpoint(tablethorizontal){
+            display: flex;
+            padding: 0;
+            padding-bottom: 50px;
+            padding-top: 30px;
+            justify-content: space-between;
+            align-items: start;
+            
+        }
+        & div.contact{
+            text-align: center;
+            @include mix.breakpoint(tablethorizontal){
+                text-align: start;
+            }
+            & p{
+                font-size: 16px;
+                line-height: 26px;
+                color: #d9d9d9;
+                margin-bottom: 50px;
+                width: 100%;
+                @include mix.breakpoint(tablethorizontal){
+                    width: 65%;
+                }
+            }
+            & h1{
+                margin-bottom: 20px;
+                font-size: 40px;
+                line-height: 40px;
+                @include mix.breakpoint(tablethorizontal){
+                    font-size: 60px;
+                }
+            }
+        }
+        & div.formulario_contact form{
+            position: relative;
+            & button{
+                margin-bottom: 87px;
+                border: none;
+                display: flex;
+                justify-content: flex-end;
+                @include mix.breakpoint(tablet){
+                    margin-bottom: 30px;
+                }
+            }
+            & input.nombre{
+                font-size: 16px;
+                color: #ffffff;
+                &:valid{
+                    border-bottom: 2px solid #4EE1A0;
+                }
+            }
+            & input.mail{
+                background-image: url(./../../img/error.png);
+                background-repeat: no-repeat;
+                background-position: right;
+                font-size: 16px;
+                color: #ffffff;
+                margin-bottom: 0;
+                &:valid{
+                    border-bottom: 2px solid #4EE1A0;
+                    background-image: none;
+                }
+                &:invalid + span{
+                    visibility: visible;
+                }
+            }
+            & span{
+                position: absolute;
+                visibility: hidden;
+                right: 0;
+                color: #FF6F5B;
+            }
+            & textarea{
+                color: #ffffff;
+                font-size: 16px;
+                margin-top: 20px;
+            }
+        }
+        
+    }
+    & section.footer{
+        display: flex;
+        padding: 39px 107px;
+        flex-direction: column;
+        align-items: center;
+        @include mix.breakpoint(tablet){
+            flex-direction:row;
+            justify-content: space-between;
+            align-items: center;
+            justify-items: center;
+            padding: 30px;
+        }
+        & div.iconos{
+            margin-top: 20px;
+            display: inline-flex;
+            justify-content: space-between;
+            gap: 25px;
+            @include mix.breakpoint(tablet){
+                margin-top: 0;
+            }
+        }
+    }
+}

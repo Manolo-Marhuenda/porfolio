@@ -1,0 +1,148 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mix;
+
+header{
+    background-color: #151515;
+    background-image: url(./../../img/muelles.png);
+    background-repeat: no-repeat;
+    background-position-y: 100px;
+    @include mix.breakpoint(tablethorizontal){
+        background-image: url(./../../img/muelle_desktop.png);
+        background-position-y: 150px;
+    }
+
+}
+
+
+header div.contain_header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include mix.breakpoint(tablet){
+        display: grid;
+        align-items: stretch;
+        padding: 0;
+        grid-template-columns: 60% 40%;
+        grid-template-areas:"marca bloque2"
+                            "hero bloque2"
+                            "a bloque2";
+
+    }
+    & div.marca{
+        padding-top: 20px;
+        @include mix.breakpoint(tablet){
+            grid-area: marca;
+            justify-self: start;
+            align-self: start;
+            padding-top: 29px;
+            padding-left: 29px;
+        }
+    }
+    & div.foto_iconos{
+        position: relative;
+        margin-top: 20px;
+        display: flex;
+        justify-content:center;
+        flex-direction: column;
+        max-width: 174px;
+        background-image: linear-gradient(rgba(21,21,21,0.2), rgba(36,36,36,1)80%);
+        @include mix.breakpoint(tablet){
+            padding-top: 29px;
+            margin-top: 0;
+            grid-area: bloque2;
+            background-color: #242424;
+            background-image: none;
+            max-width: 100%;
+            
+        }
+        & div.iconos{
+            display: inline-flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            @include mix.breakpoint(tablet){
+                width: 60%;
+                display: flex;
+                align-self: end;
+                gap: 20px;
+                padding-right: 29px;
+                margin-bottom: 66px;
+            }
+
+        }
+        & img.fotografia{
+            @include mix.breakpoint(tablet){
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    & picture {
+        position: absolute;
+        right: 0;
+        transform: translateY(-20%);
+        @include mix.breakpoint(tablet){
+            bottom: 0;
+            transform: translateY(0%);
+        }
+        @include mix.breakpoint(tablethorizontal){
+            right: 345px;
+            bottom: 90px;
+        }
+    }
+    & div.hero{
+        text-align: center;
+        @include mix.breakpoint(tablet){
+                justify-self: start;
+                align-self: start;
+                text-align: start;
+                padding-left: 29px;
+                width: 530px;
+                margin-top: 22%;
+            }
+        & h1{
+            font-size: 40px;
+            line-height: 40px;
+            margin-top: 40px;
+            white-space: normal;
+            @include mix.breakpoint(tablet){
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                font-size: 72px;
+                line-height: 72px;
+                letter-spacing: 2.05px;
+                width: 100%;
+                position: relative;
+            }
+        }
+        & p{
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 24px;
+            margin-bottom: 24px;
+            @include mix.breakpoint(tablet){
+                margin: 0;
+                max-width: 400px;
+                padding-top: 40px;
+                font-size: 17px;
+            }
+
+        }
+    }
+    & a{
+        margin-bottom: 40px;
+        @include mix.breakpoint(tablet){
+                grid-area: a;
+                padding-left: 29px;
+                margin: 0;
+                padding-top: 34px;
+                align-self: auto;
+                justify-self: auto;
+        }
+    }
+}
