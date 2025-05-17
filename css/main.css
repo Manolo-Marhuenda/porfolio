@@ -737,6 +737,11 @@ header div.contain_header div.hero h1 {
     position: relative;
   }
 }
+header div.contain_header div.hero h1 span.subrayado {
+  text-decoration: underline;
+  text-decoration-color: #4EE1A0;
+  text-underline-position: under;
+}
 header div.contain_header div.hero p {
   font-size: 16px;
   line-height: 26px;

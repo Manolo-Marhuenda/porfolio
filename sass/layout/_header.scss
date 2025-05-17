@@ -119,6 +119,11 @@ header div.contain_header{
                 width: 100%;
                 position: relative;
             }
+            & span.subrayado{
+                text-decoration: underline;
+                text-decoration-color: #4EE1A0;
+                text-underline-position: under;
+            }
         }
         & p{
             font-size: 16px;
