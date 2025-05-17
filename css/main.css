@@ -471,7 +471,7 @@ body {
 
 footer {
   background-color: #242424;
-  background-image: url(./../../img/muelles.png);
+  background-image: url(./../img/muelles.png);
   background-repeat: no-repeat;
   background-position-y: 61%;
 }
@@ -483,7 +483,7 @@ footer {
 @media (min-width: 1024px) {
   footer {
     background-position-y: 60%;
-    background-image: url(./../../img/muelle_desktop.png);
+    background-image: url(./../img/muelle_desktop.png);
   }
 }
 footer section.contact {
@@ -610,13 +610,13 @@ footer section.footer div.iconos {
 
 header {
   background-color: #151515;
-  background-image: url(./../../img/muelles.png);
+  background-image: url(./../img/muelles.png);
   background-repeat: no-repeat;
   background-position-y: 100px;
 }
 @media (min-width: 1024px) {
   header {
-    background-image: url(./../../img/muelle_desktop.png);
+    background-image: url(./../img/muelle_desktop.png);
     background-position-y: 150px;
   }
 }

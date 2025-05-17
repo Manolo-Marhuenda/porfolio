@@ -5,7 +5,7 @@
 
 footer{
     background-color: #242424;
-    background-image: url(./../../img/muelles.png);
+    background-image: url(./../img/muelles.png);
     background-repeat: no-repeat;
     background-position-y: 61%;
     @include mix.breakpoint(tablet){
@@ -13,7 +13,7 @@ footer{
     }
     @include mix.breakpoint(tablethorizontal){
         background-position-y: 60%;
-        background-image: url(./../../img/muelle_desktop.png);
+        background-image: url(./../img/muelle_desktop.png);
     }
     & section.contact{
         border-bottom: 1px solid #ffffff;

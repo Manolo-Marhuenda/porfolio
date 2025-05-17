@@ -6,11 +6,11 @@
 
 header{
     background-color: #151515;
-    background-image: url(./../../img/muelles.png);
+    background-image: url(./../img/muelles.png);
     background-repeat: no-repeat;
     background-position-y: 100px;
     @include mix.breakpoint(tablethorizontal){
-        background-image: url(./../../img/muelle_desktop.png);
+        background-image: url(./../img/muelle_desktop.png);
         background-position-y: 150px;
     }
 
