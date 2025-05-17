@@ -140,7 +140,8 @@ a:hover {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -555,7 +556,7 @@ footer section.contact div.formulario_contact form input.nombre:valid {
   border-bottom: 2px solid #4EE1A0;
 }
 footer section.contact div.formulario_contact form input.mail {
-  background-image: url(./../../img/error.png);
+  background-image: url(./../img/error.png);
   background-repeat: no-repeat;
   background-position: right;
   font-size: 16px;
@@ -878,13 +879,12 @@ main section.proyects div.proyect article div.enlaces a {
   letter-spacing: 2.26px;
 }
 main section.proyects div.proyect article img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 253px;
 }
 main section.proyects h2 {
   margin-bottom: 0;
   font-size: 24px;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
